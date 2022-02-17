@@ -1,0 +1,42 @@
+.cardProduct {
+  background: #171717;
+  box-shadow: 0px 0px 30px #0A0A0A;
+  border-radius: 8px;
+  width: 540px;
+  height: 260px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 16px;
+  }
+
+  > &__picture {
+    > img {
+      width: 100%;
+    }
+  }
+
+  > &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4.5fr 1fr;
+
+    > .description {
+      &__title {
+        margin-top: 11px;
+        margin-bottom: 22px;
+      }
+    }
+    > .priceAdd {
+      &__price {
+        text-align: left;
+      }
+
+      &__add {
+        text-align: right;
+      }
+    }
+  }
+}

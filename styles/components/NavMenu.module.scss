@@ -1,0 +1,15 @@
+.navMenu {
+  &_items {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__link {
+    a:hover {
+      color: #F67362;
+    }
+  }
+}

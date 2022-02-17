@@ -1,0 +1,27 @@
+.main {
+  &_items {
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr;
+
+    h3 {
+      display: flex;
+      align-items: center;
+    }
+
+    &__timePhone {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &_map {
+      h4 {
+        margin-bottom: 25px;
+      }
+
+      &__map {
+        width: 1376px;
+        height: 432px;
+      }
+    }
+  }
+}

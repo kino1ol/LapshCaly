@@ -1,0 +1,44 @@
+.additivesPop {
+  background: #171717;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 30px #0A0A0A;
+  border-radius: 8px;
+  position:  fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  &_visible_false {
+    display: none;
+  }
+
+  &_visible_true {
+    display: block;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+
+  &__container {
+    margin: 50px 30px;
+    grid-template-rows: 1fr 8fr 1fr;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__items {
+    > .additivePop {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}

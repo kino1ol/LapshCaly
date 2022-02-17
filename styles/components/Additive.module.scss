@@ -1,0 +1,16 @@
+.additive {
+  max-width: 500px;
+  max-height: 31px;
+  display: grid;
+  grid-template-columns: 10fr 2fr 3fr 1fr;
+
+
+}
+
+.additivesPop {
+  .additive__name {
+    p {
+      font-size: 22px;
+    }
+  }
+}

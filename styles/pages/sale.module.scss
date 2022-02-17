@@ -1,0 +1,20 @@
+.main {
+
+  &_container {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+
+    h3 {
+      margin-left: 160px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &_items {
+    span {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

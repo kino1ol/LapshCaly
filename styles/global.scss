@@ -1,0 +1,132 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Gotham";
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 21px;
+  color: #FBF9F9;
+
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.App {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1660px;
+  margin: 0 auto;
+}
+
+
+button {
+  background: #E3000F;
+  border-radius: 8px;
+  color: #FBF9F9;
+  font-family: Gotham Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 21px;
+}
+
+button:hover {
+  background: #E3000F;
+  border-radius: 8px;
+}
+
+button:active {
+  color:  #EE3F3B;
+  border: 2px solid #EE3F3B;
+  box-sizing: border-box;
+  background: none;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FBF9F9;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 105%;
+  color: #FBF9F9;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: #FBF9F9;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 112%;
+  color: #DDDDDD;
+}
+
+.price_total {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+  color: #EE3F3B;
+}
+
+._page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+}
+
+section {
+  background: #171717;
+}
+
+._container {
+  margin: 0 auto;
+  max-width: 1660px;
+  width: 100%;
+  height: 100%;
+}
+._lessContainer {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  height: 100%;
+}
+
+
