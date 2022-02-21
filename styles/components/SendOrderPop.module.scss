@@ -1,0 +1,144 @@
+@mixin checkbox {
+  width: 20px;
+  height: 20px;
+  background: #171717;
+  border: 1.26562px solid #FBF9F9;
+  box-sizing: border-box;
+  border-radius: 63.2812px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+@mixin checkbox_active {
+  content: '';
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -50%;
+  top: -50%;
+  transform: translate(-50%,-50%);
+  background: #171717;
+  border: 1.26562px solid #FBF9F9;
+  box-sizing: border-box;
+  border-radius: 63.2812px;
+}
+
+.main{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 576px;
+  height: 936px;
+  background: #171717;
+  border: 1px solid #FBF9F9;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 30px #0A0A0A;
+  border-radius: 8px;
+
+  &__cross {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .container {
+    padding: 70px 30px 45px 30px;
+
+    .items {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 2fr 2.5fr;
+      gap: 20px;
+
+      input, textarea {
+        width: 512px;
+        height: 56px;
+        background: #171717;
+        border: 1px solid #FBF9F9;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 14px;
+        font-size: 22px;
+        line-height: 21px;
+        color: #AEA6A6;
+        font-family: Gotham Pro;
+      }
+
+      .inputBlock {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+
+        input {
+          width: 144px;
+          height: 56px;
+        }
+      }
+
+      .intercom {
+        h4 {
+          margin-bottom: 25px;
+        }
+
+        &_answer {
+          display: flex;
+          align-items: center;
+        }
+
+        &_item {
+          margin-right: 80px;
+          display: flex;
+          align-items: center;
+
+          .intercom__checkbox {
+            @include checkbox;
+
+            &_active {
+              &:before {
+                @include checkbox_active;
+              }
+            }
+          }
+        }
+      }
+
+      .comment {
+        > textarea {
+          width: 512px;
+          height: 120px;
+        }
+      }
+
+      .formPay {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        &_cash {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          > p {
+            margin-left: 10px;
+          }
+        }
+
+        &_card {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          > p {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  }
+}

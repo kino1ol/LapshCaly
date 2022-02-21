@@ -2,40 +2,34 @@
   background: #171717;
   box-shadow: 0px 0px 30px #0A0A0A;
   border-radius: 8px;
-  width: 540px;
-  height: 260px;
+  width: 520px;
+  height: 250px;
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
     gap: 15px;
-    margin: 16px;
+    padding: 16px;
   }
 
-  > &__picture {
-    > img {
-      width: 100%;
-    }
-  }
-
-  > &__items {
+  &__items {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4.5fr 1fr;
+    grid-template-rows: 2.5fr 0.5fr;
 
-    > .description {
+    .description {
       &__title {
         margin-top: 11px;
         margin-bottom: 22px;
       }
     }
-    > .priceAdd {
-      &__price {
-        text-align: left;
-      }
-
+    .priceAdd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       &__add {
-        text-align: right;
+        cursor: pointer;
+        color: #DDDDDD;
       }
     }
   }

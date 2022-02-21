@@ -1,0 +1,72 @@
+.items {
+  display: grid;
+  grid-template-rows: 12fr 1fr;
+  gap: 20px;
+
+
+  &_products {
+    display: grid;
+    gap: 20px;
+    margin: 0 auto;
+    max-height: 700px;
+    padding: 30px;
+
+    &_scroll_true {
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 20px;
+      }
+    }
+
+    > div:nth-child(1) {
+      margin-top: 30px;
+    }
+  }
+
+  &_panelBooking {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 300px;
+
+    &__delivery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+
+      button:hover {
+        color: #DDDDDD;
+      }
+
+      &_active {
+        color: #EE3F3B;
+        border: 2px solid #EE3F3B;
+        box-sizing: border-box;
+        background: none;
+      }
+    }
+
+    &_releaseBooking {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    &__totalPrice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__btn_unActive {
+      color:  #EE3F3B;
+      border: 2px solid #EE3F3B;
+      box-sizing: border-box;
+      background: none;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.navBar {
+  width: 790px;
+  height: 35px;
+  margin: auto;
+
+  &_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2.8fr 1fr;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      a {
+        color: #F67362;
+      }
+    }
+
+    &_active{
+      a {
+        display: inline-block;
+        color: #F67362;
+      }
+
+      & a:after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 1px;
+        bottom: -10px;
+        background: #F67362;
+      }
+    }
+  }
+}

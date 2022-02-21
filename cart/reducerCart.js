@@ -1,45 +1,52 @@
-import {contextProduct} from "./contextProduct";
 
 export default function reducerCart(state, action) {
     switch (action.type) {
         case 'addProduct':
-            if (state
-                    .filter(
-                        el => el.name === action.name
-                    ).length !== 0
-            ) {
-                return state
-            }
-
-            const product = {
-                ...contextProduct,
-                name: action.name,
-                title: [action.title],
-                weight: action.weight,
-                price: action.price,
-            }
-
+            console.log('reduceraddProduct', state)
             return [
                 ...state,
-                product
+                {
+                    img: action.payload.img,
+                    name: action.payload.name,
+                    title: [action.payload.title],
+                    weight: action.payload.weight,
+                    price: action.payload.price,
+                    number: 1,
+                    totalPrice: action.payload.price
+                }
             ]
         case 'addProductAdditives':
-            const newState = [...state]
-            const [foundProduct] = state
-                .filter((el,i) => {
-                    if (el.name === action.name) {
-                        newState.splice(i, 1)
-                        return
+            console.log('reduceraddProductAdditives', state)
+            return state.map(el => {
+                if (el.name === action.payload.name) {
+                    el.title.push(action.payload.dataAdditive[0])
+                    el.weight = el.weight + +action.payload.dataAdditive[1]
+                    el.price = +(el.price + +action.payload.dataAdditive[2]).toFixed(1)
+                    return el
+                }
+                return el
+            })
+
+        case 'changeNumberProduct':
+            return state.map(el => {
+                    if (el.name === action.payload[0]) {
+                        el.number = action.payload[1]
+                        el.totalPrice = +(el.number * el.price).toFixed(1)
                     }
+                    return el
                 })
+        case 'deleteProduct':
+            state.forEach((el, i, arr) => {
+                if (action.payload === el.name) {
+                    arr.splice(i, 1)
+                }
+            })
 
-            foundProduct.title.push(action.additives)
-            foundProduct.weight = foundProduct.weight + action.weight
-            foundProduct.price = foundProduct.price + action.price
+            localStorage.setItem('cartState', JSON.stringify(state))
 
-            return [
-                ...newState,
-                foundProduct
-            ]
+            return [...state]
+        case 'localStorage':
+            console.log('localStorage', action.payload)
+            return action.payload
     }
 }

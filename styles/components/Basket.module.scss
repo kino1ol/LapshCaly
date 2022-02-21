@@ -1,0 +1,77 @@
+@mixin plusMinus {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #FBF9F9;
+  box-sizing: border-box;
+  border-radius: 34px;
+  border: 1px solid #FBF9F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DDDDDD;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.basket{
+  width: 1000px;
+  height: 260px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 0.84fr 2fr;
+  gap: 15px;
+  background: #171717;
+  box-shadow: 0px 0px 30px #0A0A0A;
+  border-radius: 8px;
+  transition: 300ms;
+  opacity: 100%;
+
+  &_items {
+    display: grid;
+    grid-template-columns: 3fr 3fr 0.2fr;
+  }
+
+  &_title {
+    > p:nth-child(2) {
+      margin: 15px 0;
+    }
+  }
+
+  &__cross {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  &_pricePanel {
+    display: flex;
+    align-items: end;
+
+    &__price {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 130%;
+      color: #FBF9F9;
+    }
+
+    &_number {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5px;
+      margin: 0 15px;
+
+      &__plus,
+      &__minus {
+        @include plusMinus
+      }
+
+      &__product {
+        color: #DDDDDD;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

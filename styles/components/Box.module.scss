@@ -1,0 +1,97 @@
+.box {
+  width: 1336px;
+  height: 664px;
+  background: #171717;
+  box-shadow: 0px 0px 30px #0A0A0A;
+  border-radius: 8px;
+  margin: 0 auto;
+
+  .container {
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 3.2fr 1fr;
+
+    .assembly {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+
+      .collection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+        &_first {
+          display: grid;
+          gap: 15px;
+          .yourself {
+
+            h3 {
+              text-align: left;
+              margin-bottom: 20px;
+            }
+
+            &_additives {
+              display: grid;
+              gap: 10px;
+            }
+          }
+
+          .sauce {
+            display: grid;
+            gap: 10px;
+
+            h3 {
+              text-align: left;
+            }
+          }
+        }
+
+        &_two {
+          h3 {
+            text-align: right;
+            margin-bottom: 15px;
+          }
+
+          .toping {
+            display: grid;
+            gap: 10px;
+
+            h3 {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    .panel {
+      text-align: right;
+      display: grid;
+      grid-template-columns: 2.5fr 1.5fr;
+      gap: 35px;
+
+      &_add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__btn {
+          margin-left: 35px;
+
+          &_unActive {
+            color:  #EE3F3B;
+            border: 2px solid #EE3F3B;
+            box-sizing: border-box;
+            background: none;
+            margin-left: 35px;
+
+            &:hover {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

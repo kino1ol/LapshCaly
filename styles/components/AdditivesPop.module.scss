@@ -8,6 +8,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  width: 570px;
+  height: 680px;
+  z-index: 5;
 
   &_visible_false {
     display: none;
@@ -21,11 +24,14 @@
     position: absolute;
     top: 4px;
     right: 4px;
+    cursor: pointer;
   }
 
   &__container {
     margin: 50px 30px;
-    grid-template-rows: 1fr 8fr 1fr;
+    display: grid;
+    grid-template-rows: 0.5fr 3.5fr 1.5fr;
+    height: 100%;
   }
 
   &__name {
@@ -33,12 +39,21 @@
   }
 
   &__items {
-    > .additivePop {
-      margin-bottom: 33px;
-    }
+    display: grid;
   }
 
   &__btn {
     text-align: center;
+
+    &_noActive {
+      color:  #EE3F3B;
+      border: 2px solid #EE3F3B;
+      box-sizing: border-box;
+      background: none;
+
+      &:hover {
+        background: none;
+      }
+    }
   }
 }
