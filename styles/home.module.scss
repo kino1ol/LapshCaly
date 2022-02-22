@@ -56,6 +56,7 @@
     &:hover {
       .main_gezda__gezdaMain {
         left: -470px;
+        transform: rotate(-30deg);
       }
 
       .main_gezda__gezdaBig {
@@ -125,7 +126,7 @@
 
     &:hover {
       .main_ramen__img {
-        left: -700px;
+        left: -640px;
       }
     }
 
@@ -156,7 +157,9 @@
 
     &:hover {
       .main_wok__img {
-        top: -280px;
+        top: -240px;
+        transform: rotate(-60deg);
+        left: -62.32px;
       }
     }
 
@@ -198,6 +201,597 @@
       left: -100px;
       top: 135.1px;
       transition: 500ms;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1800px) {
+  .main {
+    &_ownBox {
+
+      &__img {
+        width: 500px;
+        height: 500px;
+        left: -80px;
+        top: 260px;
+      }
+
+    }
+
+    &_gezda {
+      &:hover {
+        .main_gezda__gezdaMain {
+          top: -150px;
+          left: -300px;
+        }
+
+        .main_gezda__gezdaSmall {
+          top: 90px;
+        }
+      }
+
+      &__gezdaMain {
+        width: 800px;
+        left: -380.78px;
+        top: -120px;
+      }
+
+      &__gezdaLittle {
+        left: 22px;
+      }
+
+      &__gezdaSmall {
+        top: 110px;
+      }
+    }
+
+    &_ramen {
+
+      &:hover {
+        .main_ramen__img {
+          left: -540px;
+        }
+      }
+
+      &__img {
+        width: 1200px;
+        left: -600px;
+        top: -240px;
+      }
+    }
+
+    &_wok {
+
+      &:hover {
+        .main_wok__img {
+          top: -260px;
+          left: -50px;
+        }
+      }
+
+      &__img {
+        width: 600px;
+        left: -100px;
+        top: -300px;
+      }
+    }
+
+    &_drinks {
+      h2 {
+        position: absolute;
+        left: 16.94%;
+        right: 16.94%;
+        top: 11%;
+        bottom: 89%;
+      }
+
+      &:hover {
+        .main_drinks__img {
+          left: -75px;
+        }
+      }
+
+      &__img {
+        width: 360px;
+        left: -100px;
+        top: 100px;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1600px) {
+  .main {
+    &_ownBox {
+
+      &:hover {
+        .main_ownBox__img {
+          top: 280px;
+        }
+      }
+
+      &__img {
+        left: -40px;
+        width: 400px;
+        top: 310px;
+      }
+    }
+
+    &_gezda {
+      &:hover {
+        .main_gezda__gezdaMain {
+          top: -90px;
+          left: -200px;
+        }
+
+        .main_gezda__gezdaBig {
+          top: -40px;
+        }
+
+        .main_gezda__gezdaLittle {
+          top: -20px;
+        }
+
+        .main_gezda__gezdaSmall {
+          top: 190px;
+        }
+      }
+
+      &__gezdaMain {
+        width: 650px;
+        left: -320px;
+        top: -90px;
+      }
+
+      &__gezdaBig {
+        width: 600px;
+        right: -200px;
+        top: -60px;
+      }
+
+      &__gezdaLittle {
+        left: 0;
+        top: 0;
+      }
+
+      &__gezdaSmall {
+        width: 350px;
+        top: 220px;
+      }
+    }
+
+    &_ramen {
+
+      &:hover {
+        .main_ramen__img {
+          left: -440px;
+        }
+      }
+
+      &__img {
+        width: 1000px;
+        left: -500px;
+        top: -140px;
+      }
+    }
+
+    &_wok {
+
+      &:hover {
+        .main_wok__img {
+          top: -240px;
+          left: 15px;
+        }
+      }
+
+      &__img {
+        width: 500px;
+        left: -80px;
+        top: -250px;
+      }
+    }
+
+    &_drinks {
+      &:hover {
+        .main_drinks__img {
+          left: -70px;
+        }
+      }
+
+      &__img {
+        width: 320px;
+        left: -100px;
+        top: 90px;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .main {
+    &_ownBox {
+
+      &:hover {
+        .main_ownBox__img {
+          top: 310px;
+        }
+      }
+
+      &__img {
+        width: 350px;
+        top: 320px;
+      }
+    }
+
+    &_gezda {
+      &:hover {
+        .main_gezda__gezdaMain {
+          top: -70px;
+          left: -140px;
+        }
+
+        .main_gezda__gezdaBig {
+          top: -30px;
+        }
+
+        .main_gezda__gezdaLittle {
+          top: -70px;
+        }
+
+        .main_gezda__gezdaSmall {
+          top: 220px;
+        }
+      }
+
+      &__gezdaMain {
+        width: 550px;
+        left: -280px;
+        top: -60px;
+      }
+
+      &__gezdaBig {
+        width: 550px;
+        right: -180px;
+        top: -60px;
+      }
+
+      &__gezdaLittle {
+        left: -60px;
+        top: -40px;
+      }
+
+      &__gezdaSmall {
+        width: 300px;
+        top: 200px;
+        left: 15px;
+      }
+    }
+
+    &_ramen {
+
+      &:hover {
+        .main_ramen__img {
+          left: -320px;
+        }
+      }
+
+      &__img {
+        width: 800px;
+        left: -380px;
+        top: -40px;
+      }
+    }
+
+    &_wok {
+
+      &:hover {
+        .main_wok__img {
+          top: -200px;
+          left: 80px;
+        }
+      }
+
+      &__img {
+        width: 400px;
+        left: -60px;
+        top: -200px;
+      }
+    }
+
+    &_drinks {
+      &:hover {
+        .main_drinks__img {
+          left: -60px;
+        }
+      }
+
+      &__img {
+        width: 280px;
+        left: -100px;
+        top: 100px;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1200px) {
+  .main {
+    &_ownBox {
+
+      &:hover {
+        .main_ownBox__img {
+          top: 270px;
+        }
+      }
+
+      &__img {
+        width: 280px;
+        top: 290px;
+        left: -15px;
+      }
+    }
+
+    &_gezda {
+      &:hover {
+        .main_gezda__gezdaMain {
+          top: -70px;
+          left: -120px;
+        }
+
+        .main_gezda__gezdaBig {
+          top: -50px;
+        }
+
+        .main_gezda__gezdaLittle {
+          top: -50px;
+        }
+
+        .main_gezda__gezdaSmall {
+          top: 190px;
+        }
+      }
+
+      &__gezdaMain {
+        width: 500px;
+        left: -250px;
+        top: -60px;
+      }
+
+      &__gezdaBig {
+        width: 500px;
+        right: -160px;
+        top: -60px;
+      }
+
+      &__gezdaLittle {
+        width: 400px;
+        left: -4px;
+        top: -40px;
+      }
+
+      &__gezdaSmall {
+        width: 250px;
+        top: 200px;
+        left: 15px;
+      }
+    }
+
+    &_ramen {
+
+      &:hover {
+        .main_ramen__img {
+          left: -320px;
+        }
+      }
+
+      &__img {
+        width: 700px;
+        left: -380px;
+        top: -40px;
+      }
+    }
+
+    &_wok {
+
+      &:hover {
+        .main_wok__img {
+          top: -200px;
+          left: 100px;
+        }
+      }
+
+      &__img {
+        width: 350px;
+        left: -50px;
+        top: -200px;
+      }
+    }
+
+    &_drinks {
+      &:hover {
+        .main_drinks__img {
+          left: -55px;
+        }
+      }
+
+      &__img {
+        width: 250px;
+        left: -80px;
+        top: 80px;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .main {
+    &_section {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1.5fr 1fr;
+    }
+
+    &_ownBox {
+      grid-row: 3/4;
+      grid-column: 1/2;
+
+      &:hover {
+        .main_ownBox__img {
+          width: 210px;
+          left: 50%;
+          top: 96%;
+          transform: translate(-50%,-24%);
+        }
+      }
+
+      &__img {
+        width: 210px;
+        left: 50%;
+        top: 96%;
+        transform: translate(-50%,-24%);
+      }
+
+    }
+
+    &_gezda {
+      grid-row: 1/2;
+      grid-column: 1/3;
+
+      h2 {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+      &:hover {
+        .main_gezda__gezdaMain {
+          left: 5%;
+          top: 10%;
+          transform: translate(-50%,-10%);
+        }
+
+        .main_gezda__gezdaBig {
+          width: 600px;
+          top: 80%;
+          left: 72%;
+          transform: translate(-50%,-30%);
+        }
+
+        .main_gezda__gezdaLittle {
+          width: 300px;
+          left: 85%;
+          top: 87%;
+          transform: translate(-50%,-30%);
+        }
+      }
+
+      &__gezdaMain {
+        width: 370px;
+        left: 5%;
+        top: 10%;
+        transform: translate(-50%,-10%);
+      }
+
+      &__gezdaBig {
+        width: 600px;
+        top: 80%;
+        left: 72%;
+        transform: translate(-50%,-30%);
+      }
+
+      &__gezdaLittle {
+        width: 300px;
+        left: 85%;
+        top: 87%;
+        transform: translate(-50%,-30%);
+      }
+
+      &__gezdaSmall {
+        display: none;
+      }
+    }
+
+    &_ramen {
+      grid-row: 2/3;
+      grid-column: 1/3;
+
+      h2 {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+      }
+
+      &:hover {
+        .main_ramen__img {
+          left: 10%;
+          top: 65%;
+          transform: translate(-54%,-27%);
+        }
+      }
+
+      &__img {
+        width: 420px;
+        left: 10%;
+        top: 65%;
+        transform: translate(-54%,-27%);
+      }
+    }
+
+    &_wok {
+      grid-column: 2/3;
+      grid-row: 3/4;
+
+      &:hover {
+        .main_wok__img {
+          left: 50%;
+          top: 80%;
+          transform: translate(-50%,-50%);
+        }
+      }
+
+      &__img {
+        width: 300px;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    &_drinks {
+      grid-column: 1/3;
+      grid-row: 4/5;
+
+      h2 {
+        left: 60%;
+        top: 40%;
+        transform: translate(-50%,-50%);
+      }
+
+      &:hover {
+        .main_drinks__img {
+          width: 220px;
+          left: 17%;
+          top: 70%;
+          transform: translate(-50%,-23%);
+        }
+      }
+
+      &__img {
+        width: 220px;
+        left: 17%;
+        top: 70%;
+        transform: translate(-50%,-23%);
+      }
     }
   }
 }

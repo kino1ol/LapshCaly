@@ -4,13 +4,29 @@
   border: 1px solid #FBF9F9;
   box-sizing: border-box;
   border-radius: 34px;
-  border: 1px solid #FBF9F9;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #DDDDDD;
   font-size: 22px;
   cursor: pointer;
+
+  ///////////////////////////////////////////////////////////////////////
+
+  @media (max-width: 1200px) {
+    width: 19px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  ///////////////////////////////////////////////////////////////////////
+
+  @media (max-width: 992px) and (min-height: 600px) {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .basket{
@@ -45,7 +61,7 @@
 
   &_pricePanel {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 
     &__price {
       font-weight: normal;
@@ -71,6 +87,149 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+}
+
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1600px) {
+  .basket{
+    width: 900px;
+    height: 220px;
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1200px) {
+  .basket{
+    width: 600px;
+    height: 160px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 0.84fr 2fr;
+    position: relative;
+
+    &_items {
+      display: grid;
+      grid-template-columns: 6fr 0.2fr;
+    }
+
+    &_title {
+      position: absolute;
+      max-width: 320px;
+
+      > p:nth-child(2) {
+        margin: 7px 0;
+      }
+    }
+
+    &__cross {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    &_pricePanel {
+      display: flex;
+      align-items: flex-end;
+      margin: 0 auto;
+
+      &__price {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 130%;
+        color: #FBF9F9;
+      }
+
+      &_number {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        margin: 0 15px;
+
+        &__plus,
+        &__minus {
+          @include plusMinus
+        }
+
+        &__product {
+          color: #DDDDDD;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .basket{
+    width: 280px;
+    height: 460px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 30px;
+    gap: 15px;
+    position: relative;
+
+    &_items {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr 1fr;
+    }
+
+    &_title {
+      > p:nth-child(2) {
+        margin: 15px 0;
+      }
+    }
+
+    &__cross {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    &_pricePanel {
+      grid-row: 2/3;
+      margin: auto;
+
+      &__price {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 130%;
+        color: #FBF9F9;
+      }
+
+      &_number {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        margin: 0 15px;
+
+        &__plus,
+        &__minus {
+          @include plusMinus
+        }
+
+        &__product {
+          color: #DDDDDD;
+          font-size: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }

@@ -37,6 +37,7 @@ const CardProduct = ({infoProduct, ml}) => {
             <div className={style.cardProduct__container}>
                 <div className={style.cardProduct__picture}>
                     <Image
+                        layout={"responsive"}
                         src={img}
                         alt={'cardImg'}
                         placeholder={"blur"}

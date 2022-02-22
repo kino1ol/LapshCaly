@@ -5,3 +5,29 @@
     margin-right: 30px;
   }
 }
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .adress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__city {
+      margin-right: 30px;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .adress {
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h4 {
+      font-size: 28px;
+    }
+  }
+}

@@ -11,6 +11,7 @@ import ramen from '../public/mainPage/Ramen.webp'
 import wok from '../public/mainPage/wok.webp'
 import drinks from '../public/mainPage/beverages.webp'
 
+
 const Home = () => {
 
     return (

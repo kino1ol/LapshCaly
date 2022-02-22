@@ -4,7 +4,7 @@ import box from "../../public/ownBox/box.webp";
 import Additive from "../Additive/Additive";
 import {useContext, useEffect, useState} from "react";
 import {ContextCart} from "../../cart/contextCart";
-import {getTotalPrice,addBoxInCart} from "./Box.js";
+import {addBoxInCart} from "./Box.js";
 
 const Box = () => {
     const [isChecked, setChecked] = useState(false)

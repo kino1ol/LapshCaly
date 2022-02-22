@@ -23,7 +23,7 @@ const Page = ({children}) => {
               className={`_page`}
         >
             <Header/>
-            <section>
+            <section className={style.section}>
                 <div className={`${style.container} _container`}>
                     {pathname !== '/cart' &&
                         <NavBar/>

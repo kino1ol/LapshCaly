@@ -3,6 +3,8 @@ import Image from "next/image";
 import cross from '../../public/icons/Plus.png'
 import cash from '../../public/icons/cash.png'
 import card from '../../public/icons/card.png'
+import {changeFormPay, changeIntercomAnswer} from "./SendOrderPop.js";
+import NumberFormat from 'react-number-format';
 
 const SendOrderPop = ({setOrderPop}) => {
     return (
@@ -10,23 +12,29 @@ const SendOrderPop = ({setOrderPop}) => {
             <div className={style.container}>
                 <div className={style.items}>
                     <input placeholder={'Имя'}/>
-                    <input placeholder={'Телефон'}/>
+                    <NumberFormat placeholder={'Телефон'} format={'+375(##)###-##-##'} type={"tel"}/>
                     <input placeholder={'Улица'}/>
                     <div className={style.inputBlock}>
-                        <input placeholder={'Дом'}/>
+                        <NumberFormat placeholder={'Дом'}/>
                         <input placeholder={'Корпус'}/>
-                        <input placeholder={'Квартира'}/>
+                        <NumberFormat placeholder={'Квартира'}/>
                     </div>
                     <div className={style.intercom}>
                         <h4>Домофон</h4>
                         <div className={style.intercom_answer}>
                             <div className={style.intercom_item}>
-                                <div className={style.intercom__checkbox}>
+                                <div
+                                    className={`${style.intercom__checkbox_active} ${style.intercom__checkbox}`}
+                                    onClick={changeIntercomAnswer}
+                                >
                                 </div>
                                 <p>Да</p>
                             </div>
                             <div className={style.intercom_item}>
-                                <div className={style.intercom__checkbox}>
+                                <div
+                                    className={style.intercom__checkbox}
+                                    onClick={changeIntercomAnswer}
+                                >
                                 </div>
                                 <p>Нет</p>
                             </div>
@@ -39,7 +47,9 @@ const SendOrderPop = ({setOrderPop}) => {
                         <h4>
                             Форма оплаты
                         </h4>
-                        <div className={style.formPay_cash}>
+                        <div className={`${style.formPay_item} ${style.formPay_item_active}`}
+                             onClick={changeFormPay}
+                        >
                             <Image
                                 src={cash}
                                 alt={'cash'}
@@ -49,7 +59,9 @@ const SendOrderPop = ({setOrderPop}) => {
                                 Наличными курьеру
                             </p>
                         </div>
-                        <div className={style.formPay_card}>
+                        <div className={style.formPay_item}
+                             onClick={changeFormPay}
+                        >
                             <Image
                                 src={card}
                                 alt={'card'}

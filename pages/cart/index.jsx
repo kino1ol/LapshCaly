@@ -3,7 +3,7 @@ import style from '../../styles/pages/cart.module.scss'
 import {useContext, useEffect, useState} from "react";
 import {ContextCart} from "../../cart/contextCart";
 import Basket from "../../components/Basket/Basket.jsx";
-import SendOrderPop from "../../components/SendOrderPop/SendOrderPop";
+import SendOrderPop from "../../components/SendOrderPop/SendOrderPop.jsx";
 
 const PageCart = () => {
     const [isDelivery, setDelivery] = useState(false)
@@ -66,7 +66,7 @@ const PageCart = () => {
                         </button>
                     </div>
                 </div>
-                {isOpenOrderPop &&
+                {isOpenOrderPop && cart.state.length !== 0 &&
                     <SendOrderPop setOrderPop={setOrderPop}/>
                 }
             </div>

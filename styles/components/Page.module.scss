@@ -2,3 +2,31 @@
    display: grid;
    grid-template-rows: minmax(100px, auto) 1fr 10fr;
  }
+
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1800px) {
+  .container {
+    grid-template-rows: minmax(80px, auto) 1fr 10fr;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .container {
+    grid-template-rows: minmax(70px, auto) 1fr 10fr;
+  }
+}
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .section {
+    margin-top: 56px;
+  }
+
+  .container {
+    grid-auto-rows: minmax(70px, auto);
+    grid-template-rows: unset;
+  }
+}

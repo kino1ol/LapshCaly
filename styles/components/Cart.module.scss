@@ -1,6 +1,7 @@
 .cart {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
 
   &__numberProducts {
@@ -15,5 +16,21 @@
     background: #E3000F;
     color: #DDDDDD;
     border-radius: 50px;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .cart {
+
+    img {
+      width: 35px!important;
+    }
+
+    &__numberProducts {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

@@ -16,13 +16,15 @@ const Cart = () => {
 
     return (
         <div className={style.cart}>
-            <Link href={'/cart'}>
-                <Image
-                    src={cartPng}
-                    alt={'cart'}
-                    className={style.cart__icon}
-                    placeholder={'blur'}
-                />
+            <Link href={'/cart'} passHref={true}>
+                <a>
+                    <Image
+                        src={cartPng}
+                        alt={'cart'}
+                        className={style.cart__icon}
+                        placeholder={'blur'}
+                    />
+                </a>
             </Link>
             {numberProducts > 0 &&
             <div className={style.cart__numberProducts}>

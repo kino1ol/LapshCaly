@@ -57,3 +57,30 @@
     }
   }
 }
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1600px) {
+  .additivesPop {
+    width: 570px;
+    height: 580px;
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .additivesPop {
+    width: 570px;
+    height: 480px;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .additivesPop {
+    width: 350px;
+    height: 480px;
+  }
+}

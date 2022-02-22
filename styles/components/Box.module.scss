@@ -95,3 +95,209 @@
     }
   }
 }
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1800px) {
+  .box {
+    width: 1200px;
+    height: 580px;
+
+    .container {
+      padding: 20px;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1600px) {
+  .box {
+    width: 1200px;
+    height: 505px;
+
+    .container {
+      grid-template-rows: 6fr 1fr;
+      padding: 15px;
+
+      .assembly {
+        display: grid;
+        grid-template-columns: 0.9fr 2.1fr;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+  .box {
+    width: 1000px;
+    height: 490px;
+
+    .container {
+      grid-template-rows: 6fr 1fr;
+
+      .assembly {
+        display: grid;
+        grid-template-columns: 0.9fr 2.1fr;
+        gap: 15px;
+
+        .collection {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+
+@media (max-width: 1200px) {
+  .box {
+    width: 900px;
+    height: 420px;
+
+    .container {
+      padding: 15px;
+      grid-template-rows: 3.2fr 0.5fr;
+
+      .assembly {
+        grid-template-columns: 1fr 2fr;
+        gap: 15px;
+
+        .collection {
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+
+          &_first {
+            gap: 5px;
+            .yourself {
+
+              h3 {
+                text-align: left;
+                margin-bottom: 10px;
+              }
+
+              &_additives {
+                gap: 5px;
+              }
+            }
+
+            .sauce {
+              gap: 5px;
+            }
+          }
+
+          &_two {
+            h3 {
+              margin-bottom: 7px;
+            }
+
+            .toping {
+              gap: 5px;
+            }
+          }
+        }
+      }
+
+      .panel {
+        grid-template-columns: 2.5fr 1.5fr;
+        gap: 15px;
+
+        &_add {
+          &__btn {
+            margin-left: 18px;
+
+            &_unActive {
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .box {
+    max-width: 90vw;
+    height: 100%;
+
+    .container {
+      padding: 0;
+      grid-template-rows: unset;
+
+      .assembly {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 1.5fr;
+        gap: 15px;
+
+        .collection {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1.3fr 0.8fr;
+          gap: 15px;
+          position: relative;
+
+          &_first {
+            grid-template-rows: 0.4fr 1fr;
+            gap: 15px;
+
+            .yourself {
+
+              h3 {
+                text-align: left;
+                margin-bottom: 10px;
+              }
+
+              &_additives {
+                gap: 5px;
+              }
+            }
+
+            .sauce {
+              gap: 5px;
+            }
+          }
+
+          &_two {
+            > h3 {
+              margin-bottom: 7px;
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+
+            .toping {
+              gap: 5px;
+            }
+          }
+        }
+      }
+
+      .panel {
+        grid-template-columns: 2.5fr 1.5fr;
+        gap: 15px;
+        padding: 20px;
+
+        &_add {
+          grid-column: 1/4;
+          grid-row: 1/3;
+
+          &__btn {
+            margin-left: 18px;
+
+            &_unActive {
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

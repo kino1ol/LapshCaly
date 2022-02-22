@@ -36,3 +36,41 @@
     }
   }
 }
+
+
+//////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .navBar {
+    max-width: 90vw;
+    width: unset;
+    height: 88px;
+    display: flex;
+    align-items: center;
+
+    &__item:nth-child(4) {
+      grid-column: 2/4;
+      grid-row: 2/3;
+    }
+
+    &__item_active:nth-child(4) {
+      grid-column: 2/4;
+      grid-row: 2/3;
+    }
+
+    &_items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+
+    &__item {
+      &_active{
+        & a:after {
+          bottom: -3px;
+        }
+      }
+    }
+  }
+}

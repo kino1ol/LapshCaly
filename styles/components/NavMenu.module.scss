@@ -3,13 +3,53 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  &__link {
+  &_link {
+    &_color_active {
+      a {
+        color: #E3000F;
+      }
+    }
+
     a:hover {
       color: #F67362;
     }
   }
+}
+
+
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) and (min-height: 600px) {
+  .navMenu {
+    &_items {
+      position: sticky;
+      top: unset;
+      transform: unset;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    li {
+      margin: 25px 0;
+    }
+
+    &_link {
+      &_color_active {
+        a {
+          font-size: 42px;
+        }
+      }
+
+        a {
+          font-size: 42px;
+        }
+      }
+    }
 }
