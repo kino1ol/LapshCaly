@@ -79,7 +79,7 @@ async function sendOrder(setOrderPop, setOrderSended) {
             setOrderSended(false)
             setOrderPop(false)
         }, 1000)
-        await axios.post('http://localhost:3000/api/orderSend', order)
+        await axios.post('https://lapsh-caly.vercel.app/api/orderSend', order)
 
     }
 }
