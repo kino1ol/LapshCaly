@@ -36,6 +36,13 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 30px #0A0A0A;
   border-radius: 8px;
+  margin: auto;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DDDDDD;
+  z-index: 999;
 
   &__cross {
     position: absolute;

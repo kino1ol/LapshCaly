@@ -3,10 +3,17 @@ import Image from "next/image";
 import cross from '../../public/icons/Plus.png'
 import cash from '../../public/icons/cash.png'
 import card from '../../public/icons/card.png'
-import {changeFormPay, changeIntercomAnswer} from "./SendOrderPop.js";
+import {changeFormPay, changeIntercomAnswer, sendOrder} from "./SendOrderPop.js";
 import NumberFormat from 'react-number-format';
+import {useContext, useState} from "react";
+import {ContextCart} from "../../cart/contextCart";
 
 const SendOrderPop = ({setOrderPop}) => {
+    const cart = useContext(ContextCart);
+    const [isOrderSended, setOrderSended] = useState(false)
+
+
+
     return (
         <div className={style.main}>
             <div className={style.container}>
@@ -73,7 +80,7 @@ const SendOrderPop = ({setOrderPop}) => {
                         </div>
                     </div>
                     <div className={style.btn}>
-                        <button>
+                        <button onClick={sendOrder.bind(cart, setOrderPop, setOrderSended)}>
                             Заказать
                         </button>
                     </div>
@@ -90,6 +97,11 @@ const SendOrderPop = ({setOrderPop}) => {
                     className={style.main__cross}
                 />
             </div>
+            {isOrderSended &&
+                <div className={style.main}>
+                    Заявка отправлена
+                </div>
+            }
         </div>
     );
 };

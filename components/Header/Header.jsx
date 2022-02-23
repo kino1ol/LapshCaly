@@ -16,9 +16,8 @@ const Header = () => {
     return (
         <header className={style.header}>
             <Menu
-                className={style.burger}
-                customBurgerIcon={<Image src={burgerPNG}/>}
-                customCrossIcon={<Image src={crossPNG}/>}
+                customBurgerIcon={<Image s={true} src={burgerPNG}/>}
+                customCrossIcon={<Image s={true} src={crossPNG}/>}
             >
                 <Logo/>
                 <NavMenu/>
@@ -32,7 +31,6 @@ const Header = () => {
                     <a href={'tel:+375291111111'}>
                         <Image
                             src={phone}
-                            className={style.phone__icon}
                             alt={'calling'}
                         />
                     </a>
